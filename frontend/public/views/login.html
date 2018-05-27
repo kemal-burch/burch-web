@@ -1,0 +1,27 @@
+<section class="auth-form" ng-controller="userCtrl">
+    <div class="form-section">
+        <form class="login-form">
+            <h2 class="text-center">Log in</h2>
+            <p class="text-center">Don't have an account? <a href="#signup">Sign up</a>
+                
+            </p>
+            <div class="form-group">
+                <input type="email" class="form-control" id="LoginEmail" placeholder="Email" ng-model="userObj.username" required="true">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" id="LoginPassword" placeholder="Password" ng-model="userObj.password" required="true">
+            </div>
+            <ul class="list-inline list-unstyled">
+                <li>
+                    <div class="checkbox"></div>
+                        <label>
+                            <input type="checkbox" ng-model="userObj.rememberme"> Remember me
+                        </label>
+                    </div>
+                </li>
+            </ul>
+            <button type="submit" class="btn btn-primary" ng-click="login()">Log in</button>
+        </form>
+    </div>
+</section>
+

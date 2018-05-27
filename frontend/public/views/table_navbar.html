@@ -1,0 +1,14 @@
+<ul class="nav nav-tabs custom-tabs" role="tablist">
+  <li role="presentation" ng-class="{ active: active.tab == 'expense' }">
+    <a href="" aria-controls="expense" role="tab" ng-class="{inactive : tabs.makeDisable}" data-toggle="tab" ng-click="  setTab('expense')">Expenses </a>
+  </li>
+  <li role="presentation" ng-class="{ active: active.tab == 'exp_cat' }">
+    <a href="" aria-controls="exp_cat" role="tab" ng-class="{inactive : tabs.makeDisable}" data-toggle="tab" ng-click="fetchExpenseCategories(); setTab('exp_cat')">Expense Categories </a>
+  </li>
+  <li role="presentation" ng-class="{ active: active.tab == 'income' }">
+    <a href="" aria-controls="income" role="tab" ng-class="{inactive : tabs.makeDisable}" data-toggle="tab" ng-click="getCategoryWiseSum(); setTab('income')">Incomes </a>
+  </li>
+  <li role="presentation" ng-class="{ active: active.tab == 'income_cat' }">
+    <a href="" aria-controls="income_cat" role="tab" ng-class="{inactive : tabs.makeDisable}" data-toggle="tab" ng-click="fetchIncomeCategories(); setTab('income_cat')">Income Categories </a>
+  </li>
+</ul>

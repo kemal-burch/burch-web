@@ -1,0 +1,37 @@
+<div ng-if="showDetails">
+    <div>
+      <a class="btn btn-info rounded-button" ng-click="closeTrackerDetails()">
+        <i class="fa fa-angle-left" aria-hidden="true"></i> Back to Dasboard
+      </a>
+    </div>
+  
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Amount</th>
+          <th scope="col">Note</th>
+          <th scope="col">Date</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="tracker in trackerDetails track by $index">
+  
+          <td>{{tracker.amount}}</td>
+          <td>{{tracker.note}}</td>
+          <td> {{tracker.crtd_on | date: 'yyyy-MM-dd h:mm:ss a'}}</td>
+          <td>
+            <a class="btn btn-warning rounded-button btn-xs" data-toggle="modal" data-target="#editItemModal" ng-click="editDetail(tracker, $index)">
+              <span class="glyphicon glyphicon-pencil"></span>
+              Edit
+            </a>
+            <a class="btn btn-danger rounded-button btn-xs" data-toggle="modal" ng-click="deleteDetail(tracker, $index)">
+              <span class="glyphicon glyphicon-remove"></span>
+              Delete
+            </a>
+          </td>
+        </tr>
+  
+      </tbody>
+    </table>
+  </div>

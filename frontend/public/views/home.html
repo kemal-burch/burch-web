@@ -1,0 +1,30 @@
+<div ng-controller="dashCtrl" ng-cloak>
+    <div ng-include="'./navbar.html'"></div>
+  
+    <section>
+      <div class="container" ng-show="showData">
+        <div class="row">
+          <div class="col-md-12 dashboard-survey-table">
+            <div ng-if="!showDetails">
+              <div ng-include="'./table_navbar.html'"></div>
+  
+              <div class="tab-content custom-tab-content">
+                <div ng-include="'./expenses/table.html'"></div>
+                <div ng-include="'./incomes/table.html'"></div>
+                <div ng-include="'./expenses/categories.html'"></div>
+                <div ng-include="'./incomes/categories.html'"></div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div ng-include="'./categories/details.html'"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <div ng-include="'modals/new_expense.html'"></div>
+    <div ng-include="'modals/income.html'"></div>
+    <div ng-include="'modals/expense_category.html'"></div>
+    <div ng-include="'modals/income_category.html'"></div>
+    <div ng-include="'modals/edit_item.html'"></div>
+  </div>

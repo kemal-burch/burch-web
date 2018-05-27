@@ -1,0 +1,35 @@
+<div id="exp_cat" ng-show="isSet('exp_cat')">
+
+  <div ng-if="!showDetails">
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="expense in expenseCategories track by $index">
+          <td>
+            {{expense.id}}
+          </td>
+          <td>
+            {{expense.name}}
+          </td>
+          <td class="survey-edit manage-col" style="cursor:pointer;">
+            <a class="btn btn-warning rounded-button btn-xs" data-toggle="modal" data-target="#expenseCatModal" ng-click="editExpCat(expense, $index)">
+              <span class="glyphicon glyphicon-pencil"></span>
+              Edit
+            </a>
+            <a class="btn btn-danger rounded-button btn-xs" ng-click="deleteExpCat(expense, $index)">
+              <span class="glyphicon glyphicon-remove"></span>
+              Delete
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

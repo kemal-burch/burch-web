@@ -1,0 +1,39 @@
+<div ng-show="isSet('expense')" id="expense">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Category</th>
+          <th scope="col">Amount</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="expense in dashboardExpenses track by $index">
+          <td class="category-table-data"> {{expense.name}} </td>
+          <td class="category-table-data"> {{expense.total}} </td>
+          <td>
+            <a class="btn btn-success btn-sm rounded-button" ng-click="openExpenseDetails(expense, $index)">
+              View
+              <span class="glyphicon glyphicon-arrow-right"></span>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td class="total-data">
+            Total expenses
+          </td>
+          <td class="total-data">
+            {{dashboardExpenseTotal}}
+          </td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  
+  
+    <a href="#" class="btn btn-primary add-new-action rounded-button" data-toggle="modal" data-target="#expenseModal" ng-disabled="showLoader == 'DataLoading'"
+      ng-click="fetchExpenseCategories();">
+      Add New Expense
+      <span class="glyphicon glyphicon-plus"></span>
+    </a>
+  </div>

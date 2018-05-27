@@ -1,0 +1,35 @@
+<div id="income_cat" ng-show="isSet('income_cat')">
+
+    <div ng-if="!showDetails">
+  
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="income in incomeCategories track by $index">
+            <td>
+              {{income.id}}
+            </td>
+            <td>
+              {{income.name}}
+            </td>
+            <td class="survey-edit manage-col" style="cursor:pointer;">
+              <a class="btn btn-warning rounded-button btn-xs" data-toggle="modal" data-target="#incomeCatModal" ng-click="editIncomeCat(income, $index)">
+                <span class="glyphicon glyphicon-pencil"></span>
+                Edit
+              </a>
+              <a class="btn btn-danger rounded-button btn-xs" ng-click="deleteIncomeCat(income, $index)">
+                <span class="glyphicon glyphicon-remove"></span>
+                Delete
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

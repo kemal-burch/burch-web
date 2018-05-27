@@ -1,0 +1,23 @@
+<div id="incomeCatModal" class="modal fade lunch_Modal" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Edit Income Category:</h4>
+      </div>
+      <div class="modal-body">
+
+
+        <md-input-container class="md-block">
+          <input name="income_category" placeholder="Income Category" ng-model="dashObj.income_category">
+        </md-input-container>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary" ng-click="updateIncomeCat()" data-dismiss="modal">Update</button>
+      </div>
+    </div>
+  </div>
+</div>

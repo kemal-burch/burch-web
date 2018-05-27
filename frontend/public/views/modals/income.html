@@ -1,0 +1,40 @@
+<div id="incomeModal" class="modal fade lunch_Modal" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Add New Income:</h4>
+      </div>
+      <div class="modal-body">
+        <md-input-container class="md-block">
+          <input required name="amount" placeholder="Amount" ng-model="dashObj.amount">
+        </md-input-container>
+
+        <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle" style="width: 100%;" type="button" data-toggle="dropdown">Select Income Category
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="#" ng-repeat="category in incomeCategories" ng-click="select(category)">{{category.name}}</a>
+            </li>
+          </ul>
+        </div>
+        <label> Or Create New one</label>
+        <md-input-container class="md-block">
+          <input name="income_category" placeholder="Income Category" ng-blur="saveIncCategory()" ng-model="dashObj.income_category">
+        </md-input-container>
+
+
+        <md-input-container class="md-block">
+          <input required name="note" placeholder="Note" ng-model="dashObj.note">
+        </md-input-container>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default incomeClose" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary" ng-click="saveIncome()">Create </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+<div id="income" ng-show="isSet('income')">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Category</th>
+        <th scope="col">Amount</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="income in dashboardIncomes track by $index">
+        <td class="category-table-data"> {{income.name}} </td>
+        <td class="category-table-data"> {{income.total}} </td>
+        <td>
+          <a class="btn btn-success btn-sm rounded-button" ng-click="openExpenseDetails(income, $index)">
+            View
+            <span class="glyphicon glyphicon-arrow-right"></span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td class="total-data">
+          Total incomes
+        </td>
+        <td class="total-data">
+          {{dashboardIncomeTotal}}
+        </td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a href="#" class="btn btn-primary add-new-action rounded-button" data-toggle="modal" data-target="#incomeModal" ng-disabled="showLoader == 'DataLoading'"
+    ng-click="fetchIncomeCategories();">
+    Add New Income
+    <span class="glyphicon glyphicon-plus"></span>
+  </a>
+</div>

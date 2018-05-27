@@ -1,0 +1,18 @@
+<div id="expenseCatModal" class="modal fade lunch_Modal" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Edit Expense Category:</h4>
+      </div>
+      <div class="modal-body">
+        <md-input-container class="md-block">
+          <input name="expense_category" placeholder="Expense Category" ng-model="dashObj.expense_category">
+        </md-input-container>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary" ng-click="updateExpenseCat()" data-dismiss="modal">Update</button>
+      </div>
+    </div>
+  </div>
+</div>
