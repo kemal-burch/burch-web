@@ -2,11 +2,9 @@ var path = require("path");
 
 exports.ENV = process.env.NODE_ENV || "development";
 
-exports.MONGO_HOST =
-  process.env.NODE_MONGO_HOST ||
-  "localhost:" + (process.env.NODE_MONGO_PORT || 27017);
+exports.MONGO_HOST ="burch:burch123@ds237610.mlab.com:37610"
 exports.MONGO_PORT = process.env.NODE_MONGO_PORT || 27017;
-exports.MONGO_DBNAME = process.env.NODE_MONGO_DBNAME || "expense_tracker";
+exports.MONGO_DBNAME = "burch-web"
 exports.MONGO_USERNAME = "";
 exports.MONGO_PASSWORD = "";
 exports.MONGO_LOG_VERBOSE = true;
